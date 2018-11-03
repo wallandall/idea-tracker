@@ -12,6 +12,7 @@ Here is a working live demo:
 ```
 
   express
+  express-handlebars
 
 
 ```
