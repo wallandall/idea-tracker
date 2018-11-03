@@ -6,6 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 var {mongoose} = require('./db/mongoose');
+var {Ideas} = require('./models/Idea');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
