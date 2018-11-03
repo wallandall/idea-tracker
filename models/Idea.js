@@ -25,4 +25,4 @@ const IdeaSchema = new Schema({
 
 var Ideas = mongoose.model('Ideas', IdeaSchema);
 
-module.exports = {Ideas}
+module.exports = {Ideas};

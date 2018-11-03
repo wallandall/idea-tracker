@@ -24,6 +24,16 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+//Add Idea Form
+app.get('/ideas/add', (req, res) => {
+  res.render('ideas/add');
+});
+
+//List Ideas
+app.get('/ideas', (req, res) => {
+  res.render('ideas/ideas');
+})
+
 app.listen(port, () => {
   console.log(`Started up at port ${port}`);
 });
