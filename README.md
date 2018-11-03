@@ -10,10 +10,8 @@ Here is a working live demo:
 # Installing
 ## Dependencies
 ```
-
   express
   express-handlebars
-
 
 ```
 
