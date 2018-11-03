@@ -1,0 +1,14 @@
+{
+  "test": {
+    "POST": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/idea-tracker-test",
+    "useNewUrlParser": true,
+    "JWT_SECRET": "poijasdf98435jpgfdpoij3"
+  },
+  "development": {
+    "POST": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/idea-tracker-test",
+    "useNewUrlParser": true,
+    "JWT_SECRET": "pojiaj234oi234oij234oij4"
+  }
+}

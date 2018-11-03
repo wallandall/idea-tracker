@@ -1,7 +1,11 @@
+require('./config/config');
 const express = require('express');
 const exphbs = require('express-handlebars');
 
 const app = express();
+const port = process.env.PORT || 3000;
+
+var {mongoose} = require('./db/mongoose');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
@@ -19,7 +23,6 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
-const port = 3000;
-app.listen(port, () =>{
-  console.log(`Server started on port ${port}`);
-})
+app.listen(port, () => {
+  console.log(`Started up at port ${port}`);
+});
