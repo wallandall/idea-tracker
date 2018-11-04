@@ -28,15 +28,23 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
-// About Route
-app.get('/ideas/ideas', (req, res) => {
-  res.render('ideas/ideas');
+// Idea Index Page
+app.get('/ideas', (req, res) => {
+  Ideas.find({})
+    .sort({due_date:'desc'})
+    .then(ideas => {
+      res.render('ideas/index', {
+        ideas:ideas
+      });
+    });
 });
+
 
 // Add Idea Form
 app.get('/ideas/add', (req, res) => {
   res.render('ideas/add');
 });
+
 
 // Process Form
 app.post('/ideas', (req, res) => {
@@ -60,7 +68,16 @@ app.post('/ideas', (req, res) => {
       due_date: req.body.due_date
     });
   } else {
-    res.send('passed');
+    const newUser = {
+      title: req.body.title,
+      details: req.body.details,
+      due_date: req.body.due_date
+    }
+    new Ideas(newUser)
+    .save()
+    .then(idea => {
+      res.redirect('/ideas');
+    })
   }
 });
 
