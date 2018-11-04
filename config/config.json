@@ -1,11 +1,11 @@
 {
   "test": {
-    "POST": 3000,
+    "POST": 5000,
     "MONGODB_URI": "mongodb://localhost:27017/idea-tracker-test",
     "useNewUrlParser": true
   },
   "development": {
-    "POST": 3000,
+    "POST": 5000,
     "MONGODB_URI": "mongodb://localhost:27017/idea-tracker-dev",
     "useNewUrlParser": true
   }
