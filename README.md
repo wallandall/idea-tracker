@@ -14,6 +14,7 @@ Here is a working live demo:
   express-handlebars
   mongoose
   body-parser
+  method-override
 
 ```
 
