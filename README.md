@@ -1,4 +1,4 @@
-# Todo API
+# Idea-Tracker
 
 This application allows users to securely crate and manage ideas.
 
@@ -13,6 +13,7 @@ Here is a working live demo:
   express
   express-handlebars
   mongoose
+  body-parser
 
 ```
 
