@@ -15,7 +15,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 //Body parser middleware
-app.use(bodyParser.urlencoded({ extends: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //Method oberride middleware
@@ -117,6 +117,16 @@ app.put('/ideas/:id', (req, res) => {
       })
   });
 });
+
+
+// Delete Idea
+app.delete('/ideas/:id', (req, res) => {
+  Ideas.remove({_id: req.params.id})
+    .then(() => {
+      res.redirect('/ideas');
+    });
+});
+
 
 app.listen(port, () => {
   console.log(`Started up at port ${port}`);
