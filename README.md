@@ -17,6 +17,7 @@ Here is a working live demo:
   method-override
   express-session
   connect-flash
+  bcryptjs
 
 ```
 
