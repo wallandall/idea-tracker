@@ -18,6 +18,8 @@ Here is a working live demo:
   express-session
   connect-flash
   bcryptjs
+  passport
+  passport-local
 
 ```
 
