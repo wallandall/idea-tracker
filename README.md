@@ -4,7 +4,7 @@ This application allows users to securely crate and manage ideas.
 
 # Demo
 
-Here is a working live demo:
+Here is a working live demo: https://idea-tracker.herokuapp.com/
 
 
 # Installing
