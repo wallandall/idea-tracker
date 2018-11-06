@@ -18,7 +18,7 @@ const users = require('./routes/users');
 require('./config/passport')(passport);
 
 const port = process.env.PORT || 3000;
-const SECRET = process.env.SECRET || "s$$&cret";
+const SECRET_PASS = process.env.SECRET_PASS || "s$$&cret";
 
 // Handlebars Middleware
 app.engine('handlebars', exphbs({
@@ -38,7 +38,7 @@ app.use(methodOverride('_method'));
 
 // Express session midleware
 app.use(session({
-  secret: 'secret',
+  secret: 'SECRET_PASS',
   resave: true,
   saveUninitialized: true
 }));
