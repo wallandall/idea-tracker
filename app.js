@@ -14,6 +14,13 @@ const app = express();
 const ideas = require('./routes/ideas');
 const users = require('./routes/users');
 
+//Handlebars Helper
+const {
+  truncate,
+  stripTags,
+  formatDate
+} = require('./helpers/hbs');
+
 //Passport config
 require('./config/passport')(passport);
 
@@ -22,9 +29,15 @@ const SECRET_PASS = process.env.SECRET_PASS || "s$$&cret";
 
 // Handlebars Middleware
 app.engine('handlebars', exphbs({
+  helpers: {
+    truncate: truncate,
+    stripTags: stripTags,
+    formatDate: formatDate
+  },
   defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
+
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));

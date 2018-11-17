@@ -14,8 +14,9 @@
     </div>
     <div class="form-group">
       <label for="due_date">Due Date</label>
-      <input type="date" class="form-control" name="due_date" required value="{{idea.title}}">
+      <input type="date" class="form-control" name="due_date" required value="{{formatDate due_date 'Y-M-DD'}}">
     </div>
+
     <div class="form-group">
       <select name="status" class="form-control form-control-lg" value="{{idea.status}}">
         <option selected="selected">

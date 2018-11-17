@@ -20,6 +20,7 @@ Here is a working live demo: https://idea-tracker.herokuapp.com/
   bcryptjs
   passport
   passport-local
+  moment
 
 ```
 
